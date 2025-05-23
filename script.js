@@ -1,5 +1,6 @@
 $(document).ready(function () {
   let grandTotal = 0;
+  let count = 1;
 
   // Function to update the grand total display
   function updateGrandTotal() {
@@ -8,9 +9,9 @@ $(document).ready(function () {
 
   // Function to clear the form inputs
   function clearForm() {
-    $("#code, #title, #qty, #price").val("");
+    $(" #title, #qty, #price").val("");
     $("#discount").val("0");
-    $("#code").focus();
+    $("#title").focus();
   }
 
   // Function to remove the empty state row
@@ -23,15 +24,13 @@ $(document).ready(function () {
     e.preventDefault();
 
     // Get form values
-    const code = $("#code").val();
     const title = $("#title").val();
     const qty = parseFloat($("#qty").val());
     const price = parseFloat($("#price").val());
     const discount = parseFloat($("#discount").val()) || 0;
-    console.log(code);
 
     // Validate required fields
-    if (!code || !title || !qty || !price) {
+    if (!title || !qty || !price) {
       alert("Please fill in all required fields");
       return;
     }
@@ -50,7 +49,7 @@ $(document).ready(function () {
     // Create new table row
     const row = `
       <tr data-amount="${amount}">
-        <td>${code}</td>
+        <td>${count}</td>
         <td>${title}</td>
         <td>$${price.toFixed(2)}</td>
         <td>${qty}</td>
@@ -84,8 +83,9 @@ $(document).ready(function () {
         </tr>
       `);
     }
+    count++;
   });
 
   // Focus on first input when page loads
-  $("#code").focus();
+  $("#title").focus();
 });
