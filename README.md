@@ -32,9 +32,9 @@ A lightweight, web-based **Invoice Manager** application for creating and managi
 
 ## Demo
 
-Try the live demo [here](#) (replace with a hosted link, e.g., GitHub Pages: `https://your-username.github.io/invoice-manager`).
+Try the live demo [here](#) (replace with a hosted link, e.g., GitHub Pages: `https://github.com/VannsanNin/Invoice-product-Manager`).
 
-![Invoice Manager Screenshot](assets/screenshot.png)
+![Invoice Manager Screenshot](/asset/image.png)
 
 _Note_: To add a screenshot, capture your application in action, save it as `assets/screenshot.png` in your repository, and update the path above.
 
@@ -51,6 +51,6 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/invoice-manager.git
+   git clone https://github.com/VannsanNin/Invoice-product-Manager
    cd invoice-manager
    ```
